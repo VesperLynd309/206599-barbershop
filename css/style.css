@@ -1,9 +1,9 @@
 @font-face {
-  font-family: PT Sans Narrow;
-  src: url(fonts/ptsansnarrow.woff);
-  src: url(fonts/ptsansnarrow.woff2);
-  src: url(fonts/ptsansnarrowbold.woff);
-  src: url(fonts/ptsansnarrowbold.woff2);
+  font-family: 'PT Sans Narrow';
+  src: url(../fonts/ptsansnarrow.woff);
+  src: url(../fonts/ptsansnarrow.woff2);
+  src: url(../fonts/ptsansnarrowbold.woff);
+  src: url(../fonts/ptsansnarrowbold.woff2);
 }
 
 html,
@@ -14,12 +14,13 @@ body {
   font-weight: bold;
   color: #000000;
   min-width: 1122px;
-  min-height: 1750px;
+  min-height: 1250px;
   margin: 0;
   padding: 0;
 }
 
 body {
+  /* Фоновый черный временно отключен, чтобы не мешал */
   /*background: #000000 url("barbershop-index-grid.jpg") no-repeat 50% 3px;*/
   background-size: 1122px auto;
 }
@@ -52,8 +53,10 @@ h3 {
   float: left;
   width: 140px;
   margin-right: 20px;
-  padding-top: 20px;
+  padding-top: 22px;
+  padding-left: 19px;
   min-height: 70px;
+  box-sizing: border-box;
 }
 
 .main-header {
@@ -74,7 +77,7 @@ h3 {
 
 .main-navigation li {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
   font-size: 16px;
   margin-right: 40px;
 }
@@ -83,23 +86,21 @@ h3 {
   float: left;
   width: 540px;
   min-height: 70px;
-  background-color: #dd6645;
   font-size: 0px;
 }
 
 .main-navigation-catalog li {
   display: inline-block;
-  margin-right: 40px;
-  background-color: #858687;
   font-size: 16px;
 }
 
-.main-navigation-catalog li:last-child {
-  margin-right: 0;
+.main-navigation-catalog a {
+  display: block;
+  padding: 20px 32px;
 }
 
-.main-navigation-catalog li:first-child {
-  margin-left: -40px;
+.main-navigation-catalog a:first-child {
+  padding-left: 0;
 }
 
 .user-block {
@@ -206,25 +207,19 @@ h3 {
 
 /* КАТАЛОГ ТОВАРА */
 
-.breadcrumbs  {
-  padding-bottom: 55px;
-}
-
-.breadcrumbs li {
-  display: inline-block;
-  vertical-align: top;
-}
 
 .catalog-item-content-left {
   float: left;
   width: 460px;
   min-height: 500px;
+  margin-top: 50px;
 }
 
 .image-small .item-photo {
   float: left;
   width: 140px;
   margin-right: 20px;
+  margin-top: 20px;
   min-height: 149px;
 }
 
@@ -236,17 +231,19 @@ h3 {
   float: right;
   width: 390px;
   min-height: 530px;
+  margin-top: 70px;
+  margin-bottom: 50px;
 }
 
 .availability {
   float: left;
   width: 90px;
-  min-height: 60px;
+  min-height: 40px;
 }
 .article {
   float: right;
   width: 140px;
-  min-height: 60px;
+  min-height: 40px;
   color: #e5e5e5;
 }
 
@@ -277,18 +274,47 @@ h3 {
 .composition {
   font-size: 24px;
   line-height: 30px;
+  margin-top: 65px;
 }
 
 /* КАТАЛОГ */
+
+.main-header-catalog {
+  margin-bottom: 50px;
+}
+
+.catalog-title,
+.catalog-item-title {
+  margin-bottom: 18px;
+}
+
+.breadcrumbs ul {
+  font-size: 0;
+}
+
+.breadcrumbs li {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+}
+
+.breadcrumbs a {
+  padding: 0 40px;
+}
+
+.breadcrumbs a:first-child {
+  padding-left: 0;
+}
 
 .catalog-content-left {
   float: left;
   width: 220px;
   min-height: 570px;
+  margin-top: 20px;
 }
 
-.catalog-content-left li {
-  margin-bottom: 17px;
+.catalog-content li {
+  margin-bottom: 13px;
 }
 
 .catalog-content-left .btn {
@@ -300,7 +326,13 @@ h3 {
   float: right;
   width: 700px;
   min-height: 680px;
+  margin-top: 50px;
 }
+
+.groups {
+  margin-top: 40px;
+}
+
 
 article {
   float: left;
@@ -315,18 +347,18 @@ article:nth-child(3n) {
 }
 
 .desc {
-  float: left;
+  display: inline-block;
+  vertical-align: top;
   width: 220px;
 }
 
 .manufacturer {
-  float: left;
+  display: inline-block;
+  vertical-align: top;
   width: 220px;
 }
 
-.item img,
-.manufacturer,
-.selling {
+.manufacturer {
   margin-bottom: 15px;
 }
 
@@ -351,5 +383,4 @@ article:nth-child(3n) {
 
 .pagination .disabled {
   background-color: #ffffff;
-
 }
