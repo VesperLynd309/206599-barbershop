@@ -2,15 +2,16 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link href="css/style.css" rel="stylesheet">
     <title>Барбершоп «Бородинский» - Каталог товаров</title>
   </head>
   <body>
     <header class="main-header">
-      <div class="container">
-        <a class="index-logo" href="#">
+      <div class="container clearfix">
+        <a class="index-logo-catalog" href="#">
           <img src="img/catalog-logo.png" width="111" height="24" alt="Барбершоп «Бородинский»">
         </a>
-        <nav class="main-navigation">
+        <nav class="main-navigation-catalog">
           <ul>
           	<li>
           	  <a href="#">Информация</a>
@@ -50,9 +51,9 @@
             </li>
           </ul>
         </div>
-        <div class="catalog-content">
+        <div class="catalog-content clearfix">
           <div class="catalog-content-left">
-            <form action="https://echo.htmlacademy.ru" method="post">
+            <form action="https://echo.htmlacademy.ru" method="get">
               <h3>Производители</h3>
               <ul>
                 <li>
@@ -99,7 +100,7 @@
             </form>
           </div>
           <div class="catalog-content-right">
-            <div class="items">
+            <div class="items clearfix">
               <article class="item">
                 <a href="#">
                   <img src="img/catalog-item1.png" width="220" height="165" alt="Набор для путешествий «Baxter of California»">
@@ -112,7 +113,7 @@
                 </a>
                 <div class="selling">
                   <div class="price">2900 руб.</div>
-                  <button class="btn" type="button">Купить</button>
+                  <a class="btn" type="button">Купить</a>
                 </div>
               </article>
               <article class="item">
@@ -127,7 +128,7 @@
                 </a>
                 <div class="selling">
                   <div class="price">750 руб.</div>
-                 <button class="btn" type="button">Купить</button>
+                 <a class="btn" type="button">Купить</a>
                 </div>
               </article>
               <article class="item">
@@ -142,7 +143,7 @@
                 </a>
                 <div class="selling">
                   <div class="price">290 руб.</div>
-                  <button class="btn" type="button">Купить</button>
+                  <a class="btn" type="button">Купить</a>
                 </div>
               </article>
               <article class="item">
@@ -157,7 +158,7 @@
                 </a>
                 <div class="selling">
                   <div class="price">500 руб.</div>
-                  <button class="btn" type="button">Купить</button>
+                  <a class="btn" type="button">Купить</a>
                 </div>
               </article>
               <article class="item">
@@ -170,7 +171,7 @@
                 </a>
                 <div class="selling">
                   <div class="price">300 руб.</div>
-                  <button class="btn" type="button">Купить</button>
+                  <a class="btn" type="button">Купить</a>
                 </div>
               </article>
               <article class="item">
@@ -185,28 +186,26 @@
                 </a>
                 <div class="selling">
                   <div class="price">3900 руб.</div>
-                  <button class="btn" type="button">Купить</button>
+                  <a class="btn" type="button">Купить</a>
                 </div>
               </article> 
             </div>
-            <div class="pagination">
-              <nav class="pagination">
-                <ul>
-                  <li>
-                    <a class="page-number" href="#">1</a>
-                  </li>
-                  <li>
-                    <a class="page-number disabled" href="#">2</a>
-                  </li>
-                  <li>
-                    <a class="page-number" href="#">3</a>
-                  </li>
-                  <li>
-                    <a class="page-number" href="#">4</a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
+            <nav class="pagination">
+              <ul>
+                <li class="page-number">
+                  <a href="#">1</a>
+                </li>
+                <li class="page-number disabled">
+                  <a href="#">2</a>
+                </li>
+                <li lass="page-number">
+                 <a href="#">3</a>
+                </li>
+                <li class="page-number">
+                  <a href="#">4</a>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
       </div>

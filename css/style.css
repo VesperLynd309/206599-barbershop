@@ -1,14 +1,27 @@
-body,
-h2,
-h3 {
+@font-face {
+  font-family: PT Sans Narrow;
+  src: url(fonts/ptsansnarrow.woff);
+  src: url(fonts/ptsansnarrow.woff2);
+  src: url(fonts/ptsansnarrowbold.woff);
+  src: url(fonts/ptsansnarrowbold.woff2);
+}
+
+html,
+body {
   font-family: 'PT Sans Narrow', Verdana, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
   font-weight: bold;
   color: #000000;
+  min-width: 1122px;
+  min-height: 1750px;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  font-size: 14px;
-  line-height: 24px;
+  /*background: #000000 url("barbershop-index-grid.jpg") no-repeat 50% 3px;*/
+  background-size: 1122px auto;
 }
 
 h2 {
@@ -19,4 +32,324 @@ h2 {
 h3 {
   font-size: 24px;
   line-height: 30px;
+  margin-bottom: 30px;
+}
+
+.clearfix::after {
+  content: "";
+
+  display: table;
+  clear: both;
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.index-logo-catalog {
+  float: left;
+  width: 140px;
+  margin-right: 20px;
+  padding-top: 20px;
+  min-height: 70px;
+}
+
+.main-header {
+  margin-bottom: 60px;
+}
+
+.main-navigation {
+  float: left;
+  width: 780px;
+
+  /* Только для оформления сетки */
+  min-height: 70px;
+}
+
+.main-navigation ul {
+  font-size: 0;
+}
+
+.main-navigation li {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+  margin-right: 40px;
+}
+
+.main-navigation-catalog ul {
+  float: left;
+  width: 540px;
+  min-height: 70px;
+  background-color: #dd6645;
+  font-size: 0px;
+}
+
+.main-navigation-catalog li {
+  display: inline-block;
+  margin-right: 40px;
+  background-color: #858687;
+  font-size: 16px;
+}
+
+.main-navigation-catalog li:last-child {
+  margin-right: 0;
+}
+
+.main-navigation-catalog li:first-child {
+  margin-left: -40px;
+}
+
+.user-block {
+  float: right;
+  width: 140px;
+
+  /* Только для оформления сетки */
+  min-height: 70px;
+}
+
+.index-logo {
+  width: 368px;
+  min-height: 204px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 25px;
+}
+
+.features {
+  margin-bottom: 80px;
+}
+
+.features-item {
+  float: left;
+  width: 300px;
+  margin-right: 20px;
+  
+  /* Только для оформления сетки */
+  min-height: 175px;
+}
+
+.features-item:last-child {
+  margin-right: 0;
+}
+
+.index-content {
+  margin-bottom: 35px;
+  padding: 50px 80px;
+}
+
+.index-content-left {
+  float: left;
+  width: 380px;
+  
+  /* Только для оформления сетки */
+  min-height: 330px;
+}
+
+.index-content-right {
+  float: right;
+  width: 300px;
+
+  /* Только для оформления сетки */
+  min-height: 330px;
+}
+
+.main-footer {
+  margin-top: 65px;
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+.footer-contacts {
+  float: left;
+  width: 320px;
+  margin-right: 60px;
+
+  /* Только для оформления сетки */
+  min-height: 90px;
+}
+
+.footer-social {
+  float: left;
+  width: 180px;
+
+  /* Только для оформления сетки */
+  min-height: 90px;
+}
+
+.footer-copyright {
+  float: right;
+  width: 180px;
+
+  /* Только для оформления сетки */
+  min-height: 90px;
+}
+
+.index-content-left .btn,
+.index-content-right .btn {
+  width: 140px;
+  min-height: 40px;
+  margin-right: 20px;
+}
+
+.index-content-left .btn:last-child,
+.index-content-right .btn:last-child {
+  margin-right: 0;
+}
+
+.appointment-form .btn {
+  width: 300px;
+  min-height: 40px;
+}
+
+/* КАТАЛОГ ТОВАРА */
+
+.breadcrumbs  {
+  padding-bottom: 55px;
+}
+
+.breadcrumbs li {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.catalog-item-content-left {
+  float: left;
+  width: 460px;
+  min-height: 500px;
+}
+
+.image-small .item-photo {
+  float: left;
+  width: 140px;
+  margin-right: 20px;
+  min-height: 149px;
+}
+
+.image-small .item-photo:last-child {
+  margin-right: 0;
+}
+
+.catalog-item-content-right {
+  float: right;
+  width: 390px;
+  min-height: 530px;
+}
+
+.availability {
+  float: left;
+  width: 90px;
+  min-height: 60px;
+}
+.article {
+  float: right;
+  width: 140px;
+  min-height: 60px;
+  color: #e5e5e5;
+}
+
+.price {
+  float: left;
+  width: 110px;
+  min-height: 40px;
+  background-color: #e5e5e5;
+  text-align: center;
+}
+
+.item-desc {
+  margin-bottom: 40px;
+}
+
+.btn {
+  float: left;
+  width: 78px;
+  min-height: 40px;
+  background-color: #000000;
+  color: #eeeeee;
+}
+
+.selling {
+  margin-bottom: 60px;
+}
+
+.composition {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+/* КАТАЛОГ */
+
+.catalog-content-left {
+  float: left;
+  width: 220px;
+  min-height: 570px;
+}
+
+.catalog-content-left li {
+  margin-bottom: 17px;
+}
+
+.catalog-content-left .btn {
+  width: 112px;
+  min-height: 43px;
+}
+
+.catalog-content-right {
+  float: right;
+  width: 700px;
+  min-height: 680px;
+}
+
+article {
+  float: left;
+  width: 220px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  min-height: 286px;
+}
+
+article:nth-child(3n) {
+  margin-right: 0;
+}
+
+.desc {
+  float: left;
+  width: 220px;
+}
+
+.manufacturer {
+  float: left;
+  width: 220px;
+}
+
+.item img,
+.manufacturer,
+.selling {
+  margin-bottom: 15px;
+}
+
+.pagination {
+  float: left;
+  width: 240px;
+  min-height: 43px;
+  font-size: 0;
+}
+
+.pagination li {
+  display: inline-block;
+  width: 43px;
+  min-height: 43px;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 14px;
+  margin-right: 7px;
+  vertical-align: top;
+  text-align: center;
+}
+
+.pagination .disabled {
+  background-color: #ffffff;
+
 }
